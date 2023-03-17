@@ -33,7 +33,7 @@ export default function TextForm(props) {
                         
                         settext("") ; 
                         
-                               
+                              
                   
                               }
                             
@@ -48,19 +48,22 @@ export default function TextForm(props) {
 
   return (
     <>
+  
     <div className='container  '  style =  {{color :props.mode === 'light'? 'black': 'white'} }>
       <div className="mb-3">
-<label htmlFor="mybox" className="form-label">Email address </label>
-  <textarea type="email" className="form-control" id="box" value={text}  style =  {{backgroundColor :props.mode === 'light'? 'white': 'grey'  , color :props.mode === 'light'? 'black': 'whit e'}  }
-  onChange = {handletextarea} placeholder={props.holdertxt} rows="7" />
+
+
+<label htmlFor="mybox" className="form-label"><h1>ENTER THE WORDS HERE</h1> </label>
+  <textarea type="email" className="form-control" id="box" value={text}  style =  {{backgroundColor :props.mode === 'light'? 'white': '#1d4989'  , color :props.mode === 'light'? 'black': 'white'}  }
+  onChange = {handletextarea} placeholder={props.holdertxt} rows="10" />
 </div>
 <button type="button" className="btn btn-primary" onClick={handleOnClick}>convert to Uppercase</button>
 
 <button type="button" className="btn btn-primary m-2"  onClick={handleOnupper}>convert to lowercase</button>
 
-<button type="button" className="btn btn-primary m-2 " onClick={handlespaces}>extraspace </button>
+<button type="button" className="btn btn-primary m-2 " onClick={handlespaces}>removextraspace </button>
 
-<button type="button" className="btn btn-primary m-2 " onClick={removespaces}>removespaces </button>
+<button type="button" className="btn btn-primary m-2 " onClick={removespaces}>Clear  </button>
 
     </div>
      <div className='container' style =  {{color :props.mode === 'light'? 'black': 'white'}}   > 
@@ -68,7 +71,7 @@ export default function TextForm(props) {
         TEXT SUMMMARY 
       </h1>
     <p>
-      {text.split(" ").length} words and {text.length} characters 
+      {text.split(" ").length-1} words and {text.length} characters 
     </p>
      </div>
     
